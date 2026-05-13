@@ -34,8 +34,8 @@ void Task_Logic(void *p) {
         int h, m, s;
         clk.getHM(h, m, s);
         bt.check(h, m, s);
-        if (isAlarmActive) bz.playAlarm();
-        else if (isTimerActive) bz.playTimer();
+        if (isAlarmActive){ bz.playAlarm();}
+        else if (isTimerActive){bz.playTimer();}
         else bz.stop();
 
         vTaskDelay(pdMS_TO_TICKS(100));

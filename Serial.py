@@ -101,9 +101,9 @@ class SerialMonitorApp:
         if self.serial_port and self.serial_port.is_open:
             cmd = self.entry_cmd.get()
             if cmd:
-                # Gửi lệnh kèm ký tự xuống dòng (y hệt tính năng Newline của VS Code)
+                # Gửi lệnh kèm ký tự xuống dòng 
                 self.serial_port.write((cmd + '\n').encode('utf-8'))
-                self.log_to_console(f"> Gửi: {cmd}\n", color="#3498db") # In ra lệnh vừa gửi bằng màu xanh dương
+                
                 self.entry_cmd.delete(0, tk.END)
         else:
             messagebox.showwarning("Cảnh báo", "Hãy kết nối cổng COM trước khi gửi lệnh!")

@@ -1,0 +1,52 @@
+ESP32 bật nguồn
+↓
+connect WiFi
+↓
+lấy giờ NTP
+↓
+RTC chạy
+
+
+Display     → hiển thị
+Menu        → điều khiển
+Sensors     → cảm biến
+
+esp32_clock
+│
+├── include
+│   ├── Clock.h
+│   ├── Display.h
+│   ├── Menu.h
+│   ├── Stopwatch.h
+│   ├── Timer.h
+│   └── Alarm.h
+│
+├── src
+│   ├── main.cpp
+│   ├── Clock.cpp
+│   ├── Display.cpp
+│   ├── Menu.cpp
+│   ├── Stopwatch.cpp
+│   ├── Timer.cpp
+│   └── Alarm.cpp
+
+
+ if (ir > 10000) { 
+            if (checkForBeat(ir)) {
+                long delta = millis() - lastBeat;
+                lastBeat = millis();
+                float bpm = 60 / (delta / 1000.0);
+
+                if (bpm > 40 && bpm < 200) {
+                    // Đưa vào mảng để lấy trung bình
+                    rates[rateSpot++] = (byte)bpm;
+                    rateSpot %= RATE_SIZE;
+
+                    float beatAvg = 0;
+                    for (byte x = 0 ; x < RATE_SIZE ; x++) {
+                        beatAvg += rates[x];
+                    }
+                    currentBPM = beatAvg / RATE_SIZE; 
+                }
+            }
+        }

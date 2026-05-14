@@ -103,7 +103,6 @@ class SerialMonitorApp:
             if cmd:
                 # Gửi lệnh kèm ký tự xuống dòng 
                 self.serial_port.write((cmd + '\n').encode('utf-8'))
-                
                 self.entry_cmd.delete(0, tk.END)
         else:
             messagebox.showwarning("Cảnh báo", "Hãy kết nối cổng COM trước khi gửi lệnh!")

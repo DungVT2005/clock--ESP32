@@ -106,7 +106,7 @@ void Menu::handleInput(BaoThuc &bt, Timer &tmr, Stopwatch &sw) {
                 if (sw.isRunning()) sw.stop();
                 else sw.start();
             } else if (input == "r" || input == "R") {
-                sw.reset();
+                sw.reset(); 
                 Serial.println("=> DA RESET STOPWATCH");
             }
             

@@ -79,7 +79,8 @@ void Task_UI(void *p) {
                         lcd.setCursor(0, 0); 
                         if (bt.isSet()) {
                             lcd.print("ALARM: Dang cho ");
-                            lcd.setCursor(0, 1); lcd.print("den gio...      ");
+                            lcd.setCursor(0, 1); 
+                            lcd.printf("den gio:%02d:%02d", bt.getHour(), bt.getMin());
                         } else {
                             lcd.print("ALARM:          ");
                             lcd.setCursor(0, 1); lcd.print("                ");
@@ -128,7 +129,7 @@ void Task_UI(void *p) {
                         Serial.println(clk.getDateStr());
                     break;
                 case 1: 
-                    if (bt.isSet()) Serial.println("ALARM: Dang cho den gio...");
+                    if (bt.isSet()) Serial.printf("ALARM: Dang cho den gio%02d:%02d...\n", bt.getHour(), bt.getMin());
                     break;
                 case 2:
                     if (tmr.isRunning()) Serial.println("TIMER: " + tmr.getDisplay());

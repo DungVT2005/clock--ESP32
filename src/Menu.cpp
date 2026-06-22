@@ -69,7 +69,7 @@ void Menu::handleInput(BaoThuc &bt, Timer &tmr, Stopwatch &sw) {
         return;
     }
 
-    // 2. Xử lý nhập HH:MM (Đảm bảo lấy được phút)
+    // 2. Xử lý nhập HH:MM 
         int delim = input.indexOf(':');
         if (delim > 0) {
         String sHour = input.substring(0, delim);

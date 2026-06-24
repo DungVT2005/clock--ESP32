@@ -170,8 +170,8 @@ void setup() {
     bt.loadFromFlash();
     Serial.println("\n HE THONG DA KHOI DONG");
     //  Đẩy TẤT CẢ sang Core 1. Core 0 chỉ để chạy WiFi nội bộ của ESP32.
-    xTaskCreatePinnedToCore(Task_Sensor, "Sensor", 4096, NULL, 1, NULL, 1);
-    xTaskCreatePinnedToCore(Task_Logic,  "Logic",  4096, NULL, 1, NULL, 1);
+    xTaskCreatePinnedToCore(Task_Sensor, "Sensor", 4096, NULL, 2, NULL, 1);
+    xTaskCreatePinnedToCore(Task_Logic,  "Logic",  4096, NULL, 3, NULL, 1);
     xTaskCreatePinnedToCore(Task_UI,     "UI",     4096, NULL, 1, NULL, 1);
 }
 void loop() { 

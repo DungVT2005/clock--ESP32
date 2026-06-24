@@ -129,7 +129,7 @@ void Task_UI(void *p) {
                         Serial.println(clk.getDateStr());
                     break;
                 case 1: 
-                    if (bt.isSet()) Serial.printf("ALARM: Dang cho den gio%02d:%02d...\n", bt.getHour(), bt.getMin());
+                    if (bt.isSet()) Serial.printf("ALARM: Dang cho den gio %02d:%02d...\n", bt.getHour(), bt.getMin());
                     break;
                 case 2:
                     if (tmr.isRunning()) Serial.println("TIMER: " + tmr.getDisplay());

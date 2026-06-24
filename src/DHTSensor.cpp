@@ -12,9 +12,9 @@ void DHTSensor::read() {
 }
 String DHTSensor::getAlerts() {
     String s = "";
-    if (currentTemp > 36) s += "(!) Nhiet do cao\n";
-    if (currentTemp < 12) s += "(!) Nhiet do thap\n";
-    if (currentHum > 80) s += "(!) Do am cao\n";
-    if (currentHum < 50) s += "(!) Do am thap\n";
+    if (currentTemp > 36) s += "(!) Nhiet do cao";
+    if (currentTemp < 12) s += "(!) Nhiet do thap";
+    if (currentHum > 80) s += "(!) Do am cao";
+    if (currentHum < 50) s += "(!) Do am thap";
     return s;
 }

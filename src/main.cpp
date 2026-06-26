@@ -163,7 +163,7 @@ void setup() {
     lcd.print(" DANG KHOI DONG");
     delay(1500);      
     lcd.clear();
-    wifi.connect("Soc", "soc102012");
+    wifi.connect("Cá con", "muamangdee");
     clk.syncNTP();
     dht.begin();
     pulse.begin();

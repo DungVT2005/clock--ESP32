@@ -16,7 +16,7 @@ void Menu::printModeInstructions(int mode){
         
         // Hiển thị hướng dẫn nhập  cho từng chức năng
         if (currentMode == 1) Serial.println("=> Nhap gio bao thuc (HH:MM), chon c de kiem tra ");
-        else if (currentMode == 2) Serial.println("=> Nhap so phut hen gio, ");
+        else if (currentMode == 2) Serial.println("=> Nhap so phut hen gio: ");
         else if (currentMode == 3) Serial.println("=> Nhap 'b' de Bat/Dung, 'r' de Reset");
     
 }
